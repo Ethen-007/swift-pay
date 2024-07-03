@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="asset/css/checkout.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Checkout</h1>
+      <div class="summary">
+        <div class="total-amount">
+          <h2>Total Amount to Pay</h2>
+          <p id="total-amount">$0.00</p>
+        </div>
+        <div class="qr-code">
+          <h2>Scan to Pay with Google Pay</h2>
+          <img id="qr-code" src="" alt="QR Code" />
+        </div>
+      </div>
+      <button class="complete-btn">Complete Purchase</button>
+    </div>
+
+    <script>
+      function generateQRCode(amount) {
+        const payeeVPA = "ethenbiju@oksbi";
+        const payeeName = "Ethen Biju";
+        const currency = "INR";
+
+        const googlePayURL = `https://pay.google.com/gp/p/ui/pay?pa=${payeeVPA}&pn=${payeeName}&am=${amount}&cu=${currency}`;
+        const qrCodeAPI = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(
+          googlePayURL
+        )}`;
+
+        return qrCodeAPI;
+      }
+      async function fetchAmount() {
+        try {
+          const response = await fetch(
+            "https://swiftpayindia-b4f8cce016d8.herokuapp.com/checkout"
+          );
+          const data = await response.json();
+          const latestOrder = data[data.length - 1];
+          return latestOrder.amount;
+        } catch (error) {
+          console.error("Error fetching amount:", error);
+          return null;
+        }
+      }
+      document.addEventListener("DOMContentLoaded", async function () {
+        const totalAmountElement = document.getElementById("total-amount");
+        const qrCodeElement = document.getElementById("qr-code");
+
+        const amount = await fetchAmount();
+        if (amount !== null) {
+          totalAmountElement.textContent = `₹${amount}`;
+          qrCodeElement.src = generateQRCode(amount);
+        } else {
+          totalAmountElement.textContent = "Error fetching amount.";
+        }
+      });
+    </script>
+  </body>
+</html>
