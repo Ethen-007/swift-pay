@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftPay - AI-powered autonomous checkout system</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-content">
+                <h3>Overview</h3>
+                <ul class="nav-links">
+                    <li><a href="#overview" class="nav-link active">Things</a></li>
+                    <li><a href="#hardware-components" class="nav-link">Hardware Components</a></li>
+                    <li class="nav-section">
+                        <a href="#project-workflow" class="nav-link">Features</a>
+                        <ul class="nav-submenu">
+                            <li><a href="#project-workflow" class="nav-link sub">Work Flow</a></li>
+                            <li><a href="#object-detection" class="nav-link sub">Object detection</a></li>
+                            <li><a href="#raspberry" class="nav-link sub">RASPBERRY PI 3B</a></li>
+                            <li><a href="#camera" class="nav-link sub">Camera Module</a></li>
+                            <li><a href="#weight-sensor" class="nav-link sub">Weight Sensor(Load Cell)</a></li>
+                            <li><a href="#led-strip" class="nav-link sub">WS2812B RGB LED Strip</a></li>
+                            <li><a href="#power" class="nav-link sub">Power supply</a></li>
+                            <li><a href="#cabinetry" class="nav-link sub">Cabinetry</a></li>
+                            <li><a href="#security" class="nav-link sub">Securing components</a></li>
+                            <li><a href="#checkout" class="nav-link sub">Checkout Interface</a></li>
+                            <li><a href="#deploy" class="nav-link sub">Deploy API on Heroku</a></li>
+                            <li><a href="#integrate" class="nav-link sub">Integrating API in the Code</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#custom-parts" class="nav-link">Custom parts and enclosures</a></li>
+                    <li><a href="#schematics" class="nav-link">Schematics</a></li>
+                    <li><a href="#code" class="nav-link">Code</a></li>
+                    <li><a href="#credits" class="nav-link">Credits</a></li>
+                    <li><a href="#comments" class="nav-link">Comments (46)</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section id="overview" class="hero-section">
+                <div class="author-info">
+                    <div class="author-avatar">
+                        <img src="https://via.placeholder.com/40x40?text=👨‍💻" alt="Author">
+                    </div>
+                    <div class="author-details">
+                        <span class="team-name">Team DACE: ETHEN BIJU⚡ CHRIS MATHEW ⚡</span>
+                        <span class="publish-date">Published November , 2023</span>
+                    </div>
+                </div>
+
+                <div class="project-header">
+                    <h1 class="project-title">SwiftPay</h1>
+                    <p class="project-description">AI-powered autonomous checkout system for retail stores.</p>
+                    
+                    <div class="project-stats">
+                        <div class="stat">
+                            <i class="fas fa-rocket"></i>
+                            <span>Advanced</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-book"></i>
+                            <span>Full instructions provided</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-clock"></i>
+                            <span>Over 4 days</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>2 contributors</span>
+                    </div>
+                </div>
+
+                <div class="project-image">
+                    <img src="https://i.postimg.cc/P57LY2Ns/a3630a95-9a0d-481e-a734-b07248765f17.jpg" alt="SwiftPay">
+                </div>
+            </section>
+
+            <!-- Hardware Components Section -->
+            <section id="hardware-components" class="hardware-section">
+                <h2>Things used in this project</h2>
+                
+                <div class="section-title">
+                    <h3>Hardware components</h3>
+                </div>
+
+                <div class="components-grid">
+                    <div class="component-card">
+                        <div class="component-image">
+                            <img src="https://via.placeholder.com/60x60?text=RPi" alt="Raspberry Pi">
+                        </div>
+                        <div class="component-info">
+                            <h4>Raspberry Pi 3 Model B</h4>
+                        </div>
+                        <div class="component-quantity">
+                            <span class="quantity">× 1</span>
+                            <button class="btn-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                            <button class="btn-expand">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-info full-width">
+                            <h4>Seeed Studio Weight Sensor (Load Cell) 0-3kg</h4>
+                        </div>
+                        <div class="component-quantity">
+                            <span class="quantity">× 1</span>
+                            <button class="btn-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-image">
+                            <img src="https://via.placeholder.com/60x60?text=SF" alt="SparkFun">
+                        </div>
+                        <div class="component-info">
+                            <h4>SparkFun Load Cell Amplifier - HX711</h4>
+                        </div>
+                        <div class="component-quantity">
+                            <span class="quantity">× 1</span>
+                            <button class="btn-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-info full-width">
+                            <h4>5V 2A power supply</h4>
+                        </div>
+                        <div class="component-quantity">
+                            <span class="quantity">× 1</span>
+                            <button class="btn-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-info full-width">
+                            <h4>RFE552 5 Megapixel 160° degrees Wide Angle Fish-Eye Camera</h4>
+                        </div>
+                        <div class="component-quantity">
+                            <span class="quantity">× 1</span>
+                            <button class="btn-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-info full-width">
+                            <h4>WS2812B RGB Led Strip</h4>
+                        </div>
+                        <div class="component-quantity">
+                            <span class="quantity">× 1</span>
+                            <button class="btn-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-image">
+                            <img src="https://via.placeholder.com/60x60?text=DC" alt="DC Jack">
+                        </div>
+                        <div class="component-info">
+                            <h4>TaydaElectronics DC POWER JACK 2.1MM BARREL-TYPE PCB MOUNT</h4>
+                        </div>
+                        <div class="component-quantity">
+                            <span class="quantity">× 1</span>
+                            <button class="btn-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-info full-width">
+                            <h4>Plywood</h4>
+                        </div>
+                        <div class="component-quantity">
+                            <span class="quantity">× 1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-title">
+                    <h3>Software apps and online services</h3>
+                </div>
+
+                <div class="components-grid">
+                    <div class="component-card">
+                        <div class="component-image">
+                            <img src="https://via.placeholder.com/60x60?text=EI" alt="Edge Impulse">
+                        </div>
+                        <div class="component-info">
+                            <h4>Edge Impulse Studio</h4>
+                        </div>
+                        <div class="component-quantity">
+                            <button class="btn-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-image">
+                            <img src="https://via.placeholder.com/60x60?text=🥧" alt="Raspberry Pi">
+                        </div>
+                        <div class="component-info">
+                            <h4>Raspberry Pi Raspbian</h4>
+                        </div>
+                        <div class="component-quantity">
+                            <button class="btn-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-info full-width">
+                            <h4>Microsoft Visual Studio code</h4>
+                        </div>
+                        <div class="component-quantity">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="project-workflow" class="raspberry-section">
+                <h2>Project Workflow</h2>
+                <div class="raspberry-image">
+                    <img src="https://hackster.imgix.net/uploads/attachments/1358836/image_1dVD0qRN2I.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="Project Workflow">
+                </div>
+                <p >
+                   Edge Impulse is one of the leading development platforms for machine learning on edge devices, free for developers and trusted by enterprises. Here we are using machine learning to build a system that can recognize the products available in the shops. Then we deploy the system on the Raspberry Pi 3B.
+                </p>
+    
+            </section>
+
+            <section id="object-detection" class="raspberry-section">
+                <h2>Object Detection</h2>
+                <div class="raspberry-image">
+                    <img src="https://hackster.imgix.net/uploads/attachments/1358838/screenshot_2021-08-07_211725_bwiU4QRC6w.jpg?auto=compress%2Cformat&w=740&h=555&fit=max" alt="Edge Impulse">
+                </div>
+                <p >
+                   Edge Impulse is one of the leading development platforms for machine learning on edge devices, free for developers and trusted by enterprises. Here we are using machine learning to build a system that can recognize the products available in the shops. Then we deploy the system on the Raspberry Pi 3B.
+                </p>
+                <br>
+                <h3>Data Acquisition</h3>
+                <br>
+                <p>To make the machine learning model it's important to have a lot of images of the products. When training the model, these product images are used to let the model distinguish between them. Make sure you have a wide variety of angles and zoom levels of the products which are available in the shops. For the data acquisition, you can capture data from any device or development board, or upload your existing datasets. So here we are uploading our existing datasets.
+                </p><br>
+                <p>For uploading, just moves on to the Data acquisition tab and just choose a file. Then label it and upload it to the training section. The Edge Impulse will only accept either JPG or PNG image files. If you have any other format, just convert it to JPG or PNG format with the online converters.</p>
+                <br>
+                <p>So we uploaded all the data with the four different labels such as Apple Lays, and Coke. So the system will only identify these objects when checking out. If you want to recognize any other objects other than these you need to upload the dataset of them. Here we uploaded around 40 images for each object. Neural networks need to learn patterns in data sets, and the more data the better</p>
+
+            </section>
+
+            <!-- Raspberry Pi Section -->
+            <section id="raspberry" class="raspberry-section">
+                <h2>RASPBERRY PI 3B</h2>
+                <p class="section-description">
+                    The Raspberry Pi 3B is the powerful development of the extremely successful 
+                    credit card-sized computer system. The brain of the device is Raspberry Pi. All 
+                    major processes are carried out by this device.
+                </p>
+
+                <div class="raspberry-image">
+                    <img src="https://hackster.imgix.net/uploads/attachments/1358844/rpi3_3_cnkiu6fD0V.jpg?auto=compress%2Cformat&w=740&h=555&fit=max" alt="Raspberry Pi 3B">
+                </div>
+
+                <div class="setup-instructions">
+                    <p>If you don't know how to set up the Pi just go <a href="#" class="link">here</a>.</p>
+                    <p>To set this device up in Edge Impulse, run the following commands:</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-title">Terminal</span>
+                            <button class="copy-btn">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <pre><code>curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+sudo apt install -y gcc g++ make build-essential nodejs sox gstreamer1.0-tools gstreamer1.0-plugins-good gstreamer1.0-plugins-base gstreamer1.0-plugins-base-apps
+npm config set user root && sudo npm install edge-impulse-linux -g --unsafe-perm</code></pre>
+                    </div>
+                    <p>If you have a Raspberry Pi Camera Module, you also need to activate it first. Run the following command:</p>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-title">Terminal</span>
+                            <button class="copy-btn">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <pre><code>sudo raspi-config</code></pre>
+                    </div>
+                    <p>This will start a wizard which will ask you to log in and choose an Edge Impulse project. If you want to switch projects run the command with --clean.
+
+That's all! Your device is now connected to Edge Impulse. To verify this, go to your Edge Impulse project, and click Devices. The device will be listed here.</p>            
+                </div>
+            </section>
+
+            <section id="camera" class="raspberry-section">
+                <h2>Camera Module</h2>
+                <p>
+                    Here I am using the REES52 5 Megapixel 160° degrees Wide Angle Fish-Eye Camera for the object detection. Due to its high viewing angle, it can cover more area than the normal camera module. The main feature of this camera module is
+
+Omnivision 5647 sensor in a fixed-focus module.
+The module attaches to Raspberry Pi, by way of a 15 Pin Ribbon Cable, to the dedicated 15-pin MIPI Camera Serial Interface (CSI).
+The CSI bus is capable of extremely high data rates, and it exclusively carries pixel data to the BCM2835 processor.
+The sensor itself has a native resolution of 5 megapixels and has a fixed focus lens onboard.
+The camera supports 1080 p @ 30 fps, 720 p @ 60 fps, and 640 x480 p 60/90 video recording also it is supported in the latest version of Raspbian, the Raspberry Pi's preferred operating system.
+For connecting the camera module to the Raspberry pi, we have used 18'' flex cable. There is considerable distance between the Raspberry Pi and the camera module.
+                </p>
+
+                <div class="raspberry-image">
+                    <img src="https://hackster.imgix.net/uploads/attachments/1358846/camera_module_VK6TOIfB2N.jpg?auto=compress%2Cformat&w=740&h=555&fit=max" alt="Pi Camera Module">
+                </div>
+            </section>
+
+            <section id="weight-sensor" class="raspberry-section">
+                <h2>Weight Sensor(Load Cell)</h2>
+                <p>
+                    Here we use the Load cell to measure the weight of the objects. The load cell Is a sensor or a transducer that converts a load or force acting on it into an electronic signal. This electronic signal can be a voltage change, current change, or frequency change depending on the type of load cell and circuitry used. There are many different kinds of load cells.
+
+Here we are using a resistive load cell. Resistive load cells work on the principle of piezo-resistivity. When a load/force/stress is applied to the sensor, it changes its resistance. This change in resistance leads to a change in output voltage when an input voltage is applied. The resistive load cell is made by using an elastic member (with a very highly repeatable deflection pattern) to which a number of strain gauges are attached.
+                </p>
+                <div class="raspberry-image">
+                    <img src="https://hackster.imgix.net/uploads/attachments/1358848/load_cell2_FnlYSRocGB.jpg?auto=compress%2Cformat&w=740&h=555&fit=max" alt="Weight Sensor">
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
